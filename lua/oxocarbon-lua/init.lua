@@ -16,12 +16,16 @@ local set_terminal_colors = function(colors)
 	vim.api.nvim_set_var('terminal_color_background', colors[1])
 	vim.api.nvim_set_var('terminal_color_foreground', colors[5])
 
-	for x in 1,16 do
+	for x = 1,16 do
 		vim.api.nvim_set_var('terminal_color_', colors[x])
 	end
 end
 
 local extend_with_attributes = function(orig, attrs)
+	if not attrs then
+		return orig
+	end
+
 	for _, attr in ipairs(attrs) do
 		orig[attr] = 1
 	end
@@ -39,11 +43,17 @@ return {
 		end
 
 		local highlight = function(name, fg, bg, attrs)
+			local fg_color = colors[fg]
+			local bg_color = colors[bg]
+
 			vim.api.nvim_set_hl(
-				0, 
-				name, 
+				0,
+				name,
 				extend_with_attributes(
-					{ fg = fg, ['fg#'] = fg, bg = bg, ['bg#'] = bg }, 
+					{
+						fg = fg_color,
+						bg = bg_color,
+					},
 					attrs
 				)
 			)
