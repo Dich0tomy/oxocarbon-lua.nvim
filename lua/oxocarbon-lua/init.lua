@@ -16,8 +16,8 @@ local set_terminal_colors = function(colors)
 	vim.api.nvim_set_var('terminal_color_background', colors[1])
 	vim.api.nvim_set_var('terminal_color_foreground', colors[5])
 
-	for x = 1,16 do
-		vim.api.nvim_set_var('terminal_color_', colors[x])
+	for x = 0,15 do
+		vim.api.nvim_set_var('terminal_color_' .. x, colors[x  + 1])
 	end
 end
 
