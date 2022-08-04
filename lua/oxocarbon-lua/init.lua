@@ -16,7 +16,6 @@ local set_terminal_colors = function(colors)
 	if vim.g.oxocarbon_lua_keep_terminal then 
 		return
 	end
-	print("AAAAAAAAAAAAA KURWAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 
 	vim.api.nvim_set_var('terminal_color_background', colors[1])
 	vim.api.nvim_set_var('terminal_color_foreground', colors[5])
