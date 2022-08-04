@@ -39,5 +39,5 @@ vim.g.oxocarbon_lua_keep_terminal = true
 ```
 or
 ```vim
-let g:oxocarbon_lua_keep_terminal = true
+let g:oxocarbon_lua_keep_terminal = 1
 ```
