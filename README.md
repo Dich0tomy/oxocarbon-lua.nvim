@@ -1,6 +1,6 @@
 ## oxocarbon-lua.nvim
 
-A lua rewrite of the original [oxocarbon.nvim](https://github.com/shaunsingh/oxocarbon.nvim) theme written in Rust.
+A lua rewrite of the original [oxocarbon.nvim](https://github.com/shaunsingh/oxocarbon.nvim) theme written in Rust.  
 Original author: [@shaunsingh](https://github.com/shaunsingh)
 
 ### Installing
