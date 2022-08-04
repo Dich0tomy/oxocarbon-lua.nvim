@@ -10,17 +10,22 @@ Install using your favourite package manager, e.g. packer:
 use 'B4mbus/oxocarbon-lua.nvim'
 ```
 or plug:
-```vimscript
+```vim
 Plug 'B4mbus/oxocarbon-lua.nvim'
 ```
 
 ### Using
 
-If you are using the newest `0.8.0` neovim version do:
+If you are using lua and the newest `0.8.0` neovim version do:
 ```lua
 vim.cmd.colorscheme 'oxocarbon-lua'
 ```
 Otherwise:
 ```lua
 vim.cmd 'colorscheme oxocarbon'
+```
+
+If you have a vimscript configuration this will get the theme running:
+```vim
+colorscheme oxocarbon-lua
 ```
