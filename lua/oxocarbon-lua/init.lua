@@ -13,11 +13,16 @@ local get_colors = function()
 end
 
 local set_terminal_colors = function(colors)
+	if vim.g.oxocarbon_lua_keep_terminal then 
+		return
+	end
+	print("AAAAAAAAAAAAA KURWAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+
 	vim.api.nvim_set_var('terminal_color_background', colors[1])
 	vim.api.nvim_set_var('terminal_color_foreground', colors[5])
 
 	for x = 0,15 do
-		vim.api.nvim_set_var('terminal_color_' .. x, colors[x  + 1])
+		vim.api.nvim_set_var('terminal_color_' .. x, colors[x + 1])
 	end
 end
 
@@ -34,13 +39,14 @@ end
 
 return {
 	load = function()
-		vim.api.nvim_set_option('termguicolors', true)
-
 		local colors = get_colors()
 
 		if not colors then
 			return
 		end
+
+		vim.api.nvim_set_option('termguicolors', true)
+		set_terminal_colors(colors)
 
 		local highlight = function(name, fg, bg, attrs)
 			local fg_color = colors[fg]
@@ -58,8 +64,6 @@ return {
 				)
 			)
 		end
-
-		set_terminal_colors(colors)
 
 		-- editor
 		highlight('ColorColumn', 18, 2)
