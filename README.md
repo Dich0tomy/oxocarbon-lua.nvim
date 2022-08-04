@@ -29,3 +29,15 @@ If you have a vimscript configuration this will get the theme running:
 ```vim
 colorscheme oxocarbon-lua
 ```
+
+### Additional configuration
+
+The original theme sets the terminal colors to oxocarbon's pallete, but it seems like a lot of tools use only the few first (black and white), which can make the usage of the terminal really annoying.
+You can disable hijacking the terminal colors by setting a global variable `oxocarbon_lua_keep_terminal` like so:
+```lua
+vim.g.oxocarbon_lua_keep_terminal = true
+```
+or
+```vim
+let g:oxocarbon_lua_keep_terminal = true
+```
