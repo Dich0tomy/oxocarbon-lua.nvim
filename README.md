@@ -22,7 +22,7 @@ vim.cmd.colorscheme 'oxocarbon-lua'
 ```
 Otherwise:
 ```lua
-vim.cmd 'colorscheme oxocarbon'
+vim.cmd 'colorscheme oxocarbon-lua'
 ```
 
 If you have a vimscript configuration this will get the theme running:
