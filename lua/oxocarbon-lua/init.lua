@@ -25,6 +25,14 @@ local set_terminal_colors = function(colors)
 	end
 end
 
+local conditional_italic = function()
+	if vim.g.oxocarbon_lua_disable_italic then
+		return nil
+	else
+		return {'italic'}
+	end
+end
+
 local extend_with_attributes = function(orig, attrs)
 	if not attrs then
 		return orig
@@ -216,7 +224,7 @@ return {
     highlight('TSVariableBuiltin', 5, 18)
     highlight('TreesitterContext', 18, 2)
     highlight('TSStrong', 18, 18, {'bold'})
-    highlight('TSComment', 4, 18, {'italic'})
+    highlight('TSComment', 4, 18, conditional_italic())
     highlight('TSFunction', 13, 18, {'bold'})
     highlight('TSSymbol', 16, 18, {'bold'})
     highlight('TSEmphasis', 11, 18, {'bold'})
