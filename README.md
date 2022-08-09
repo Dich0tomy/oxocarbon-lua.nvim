@@ -34,7 +34,6 @@ colorscheme oxocarbon-lua
 
 #### Disabling terminal colors
 The original theme sets the terminal colors to oxocarbon's pallete, but it seems like a lot of tools use only the few first (black and white), which can make the usage of the terminal really annoying.
-You can disable hijacking the terminal colors by setting a global variable `oxocarbon_lua_keep_terminal` like so:
 ```lua
 vim.g.oxocarbon_lua_keep_terminal = true
 ```
@@ -44,11 +43,18 @@ let g:oxocarbon_lua_keep_terminal = 1
 ```
 
 #### Disabling italics
-Some people just don't like them - on terminals they often trim the text.
 ```lua
 vim.g.oxocarbon_lua_disable_italic = true
 ```
 or
 ```vim
 let g:oxocarbon_lua_disable_italic = 1
+```
+#### Enabling transparency
+```lua
+vim.g.oxocarbon_lua_transparent = true
+```
+or
+```vim
+let g:oxocarbon_lua_transparent = 1
 ```
