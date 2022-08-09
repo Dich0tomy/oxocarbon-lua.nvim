@@ -33,6 +33,14 @@ local conditional_italic = function()
 	end
 end
 
+local conditional_bg = function(arg)
+	if vim.g.oxocarbon_lua_transparent then
+		return 'none'
+	else
+		return rg
+	end
+end
+
 local extend_with_attributes = function(orig, attrs)
 	if not attrs then
 		return orig
@@ -81,8 +89,8 @@ return {
     highlight('QuickFixLine', 18, 2)
     highlight('Error', 5, 12)
     highlight('LineNr', 4, 1)
-    highlight('NonText', 3, 18)
-    highlight('Normal', 5, 1)
+    highlight('NonText', 3, conditional_bg(18))
+    highlight('Normal', 5, conditional_bg(1))
     highlight('Pmenu', 5, 2)
     highlight('PmenuSbar', 5, 2)
     highlight('PmenuSel', 9, 3)
