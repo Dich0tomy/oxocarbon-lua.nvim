@@ -37,7 +37,7 @@ local conditional_bg = function(arg)
 	if vim.g.oxocarbon_lua_transparent then
 		return 'none'
 	else
-		return rg
+		return arg
 	end
 end
 
