@@ -123,9 +123,9 @@ return {
     highlight('LspSignatureActiveParameter', 9, 18)
 
     -- gutter
-    highlight('Folded', 4, 2)
-    highlight('FoldColumn', 4, 1)
-    highlight('SignColumn', 2, 1)
+    highlight('Folded', 4, conditional_bg(2))
+    highlight('FoldColumn', 4, conditional_bg(1))
+    highlight('SignColumn', 2, conditional_bg(1))
 
     -- navigation
     highlight('Directory', 9, 18)
