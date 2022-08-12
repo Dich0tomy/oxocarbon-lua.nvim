@@ -13,7 +13,7 @@ local get_colors = function()
 end
 
 local set_terminal_colors = function(colors)
-	if vim.g.oxocarbon_lua_keep_terminal then 
+	if vim.g.oxocarbon_lua_keep_terminal then
 		return
 	end
 
@@ -85,10 +85,10 @@ return {
     highlight('Cursor', 1, 5)
     highlight('CursorLine', 18, 2)
     highlight('CursorColumn', 18, 2)
-    highlight('CursorLineNr', 5, 18)
+    highlight('CursorLineNr', 5, conditional_bg(18))
     highlight('QuickFixLine', 18, 2)
     highlight('Error', 5, 12)
-    highlight('LineNr', 4, 1)
+    highlight('LineNr', 4, conditional_bg(1))
     highlight('NonText', 3, conditional_bg(18))
     highlight('Normal', 5, conditional_bg(1))
     highlight('Pmenu', 5, 2)
