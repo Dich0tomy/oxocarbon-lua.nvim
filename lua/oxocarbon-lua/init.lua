@@ -265,16 +265,30 @@ return {
     highlight('StatusCommand', 20, 1, {'underline'})
 
     -- telescope
-    highlight('TelescopeBorder', 17, 4)
-    highlight('TelescopePromptBorder', 3, 4)
-    highlight('TelescopePromptNormal', 6, 3)
-    highlight('TelescopePromptPrefix', 9, 3)
-    highlight('TelescopeNormal', none, 17)
-    highlight('TelescopePreviewTitle', 3, 12)
-    highlight('TelescopePromptTitle', 3, 9)
-    highlight('TelescopeResultsTitle', 17, 4)
-    highlight('TelescopeSelection', none, 3)
-    highlight('TelescopePreviewLine', none, 2)
+		if vim.g.oxocarbon_lua_alternative_telescope then
+			highlight('TelescopeBorder', 4, none)
+			highlight('TelescopePromptNormal', 6, none)
+			highlight('TelescopePromptPrefix', 8, none)
+			
+			highlight('TelescopeNormal', 5, none)
+			
+			highlight('TelescopePreviewTitle', 19, none)
+			highlight('TelescopePromptTitle', 19, none)
+			highlight('TelescopeResultsTitle', 19, none)
+			
+			highlight('TelescopeSelection', none, 3)
+		else
+			highlight('TelescopeBorder', 17, 17)
+			highlight('TelescopePromptBorder', 3, 3)
+			highlight('TelescopePromptNormal', 6, 3)
+			highlight('TelescopePromptPrefix', 9, 3)
+			highlight('TelescopeNormal', none, 17)
+			highlight('TelescopePreviewTitle', 3, 12)
+			highlight('TelescopePromptTitle', 3, 9)
+			highlight('TelescopeResultsTitle', 17, 17)
+			highlight('TelescopeSelection', none, 3)
+			highlight('TelescopePreviewLine', none, 2)
+		end
 
     -- notify
     highlight('NotifyERRORBorder', 9, none)
