@@ -59,6 +59,8 @@ return {
 			return
 		end
 
+    vim.g.colors_name = 'oxocarbon-lua'
+
 		vim.api.nvim_set_option('termguicolors', true)
 		set_terminal_colors(colors)
 
