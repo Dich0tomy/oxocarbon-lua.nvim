@@ -12,6 +12,26 @@ local get_colors = function()
 	end
 end
 
+local setup_lualine_theme = function(colors)
+  if vim.g.oxocarbon_lua_lualine_theme then
+    local errors = require 'oxocarbon-lua.errors'
+
+    if type(vim.g.oxocarbon_lua_lualine_theme) ~= 'number' then
+      errors.issue_oxocarbon_error(
+        'The type of vim.g.oxocarbon_lua_lualine_theme must be a number.'
+      )
+    end
+
+    if not (1 <= vim.g.oxocarbon_lua_lualine_theme <= 2) then
+      errors.issue_oxocarbon_error(
+        'The value of vim.g.oxocarbon_lua_lualine_theme must be between 1 and 2.'
+      )
+    end
+
+    require 'oxocarbon-lua.lualine'.setup(colors)
+  end
+end
+
 return {
 	load = function()
 		local colors = get_colors()
@@ -26,5 +46,7 @@ return {
     local theme = require 'oxocarbon-lua.theme'
 		theme.set_terminal_colors(colors)
 		theme.set_general_highlights(colors)
+
+    setup_lualine_theme(colors)
 	end
 }
