@@ -22,7 +22,7 @@ local setup_lualine_theme = function(colors)
       )
     end
 
-    if not (1 <= vim.g.oxocarbon_lua_lualine_theme <= 2) then
+    if not (1 <= vim.g.oxocarbon_lua_lualine_theme and vim.g.oxocarbon_lua_lualine_theme <= 2) then
       errors.issue_oxocarbon_error(
         'The value of vim.g.oxocarbon_lua_lualine_theme must be between 1 and 2.'
       )
