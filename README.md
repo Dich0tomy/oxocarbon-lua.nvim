@@ -106,3 +106,23 @@ let g:oxocarbon_lua_alternative_telescope = 1
 ```
 
 </details>
+
+<details>
+	<summary><b>Lualine themes</b></summary>
+
+<br/>
+
+One can also set lualine themes, there are two available at the moment.
+
+
+```lua
+vim.g.oxocarbon_lua_lualine_theme = 1
+-- or vim.g.oxocarbon_lua_lualine_theme = 2
+```
+or
+```vim
+let g:oxocarbon_lua_lualine_theme = 1
+" or let g:oxocarbon_lua_lualine_theme = 2
+```
+
+</details>
