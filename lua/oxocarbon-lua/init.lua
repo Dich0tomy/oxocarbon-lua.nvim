@@ -229,7 +229,7 @@ return {
     highlight('TSText', 5, none)
     highlight('TSTitle', 11, none)
     highlight('TSLiteral', 5, none)
-    highlight('TSType', 10, none)
+    highlight('TSType', 13, none)
     highlight('TSTypeBuiltin', 5, none)
     highlight('TSVariable', 5, none)
     highlight('TSVariableBuiltin', 5, none)
@@ -271,13 +271,13 @@ return {
 			highlight('TelescopeBorder', 4, none)
 			highlight('TelescopePromptNormal', 6, none)
 			highlight('TelescopePromptPrefix', 8, none)
-			
+
 			highlight('TelescopeNormal', 5, none)
-			
+
 			highlight('TelescopePreviewTitle', 19, none)
 			highlight('TelescopePromptTitle', 19, none)
 			highlight('TelescopeResultsTitle', 19, none)
-			
+
 			highlight('TelescopeSelection', none, 3)
 		else
 			highlight('TelescopeBorder', 17, 17)
