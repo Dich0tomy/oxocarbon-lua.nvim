@@ -1,3 +1,8 @@
+# oxocarbon.nvim rewritten in fennel!
+
+[The original theme](https://github.com/shaunsingh/oxocarbon.nvim) has been rewritten in fennel, which means this plugin is not needed anymore.
+I leave it as a public archive.
+
 # oxocarbon-lua.nvim
 
 A lua rewrite of the original [oxocarbon.nvim](https://github.com/shaunsingh/oxocarbon.nvim) theme written in Rust.  
